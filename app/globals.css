@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+:root {
+  --bg-cream: #FAF7F2;
+  --bg-cream-light: #FCFAF7;
+  --bg-cream-dark: #F3EFE8;
+  --text-black: #111111;
+  --text-charcoal: #3D3D3D;
+  --text-muted: #71717A;
+  --salon-green: #00C865;
+  --salon-green-hover: #00B259;
+  --salon-green-light: #E6FBF0;
+  --surface-white: #FFFFFF;
+}
+
+@theme {
+  --font-display: 'Oswald', sans-serif;
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+  --color-cream: #FAF7F2;
+  --color-cream-light: #FCFAF7;
+  --color-cream-dark: #F3EFE8;
+  --color-salon-black: #111111;
+  --color-salon-green: #00C865;
+  --color-salon-green-hover: #00B259;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg-cream);
+  color: var(--text-black);
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--bg-cream);
+  color: var(--text-black);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.font-display {
+  font-family: 'Oswald', sans-serif;
+}
+
+.font-body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF7F2;
+}
+::-webkit-scrollbar-thumb {
+  background: #D4CEBF;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00C865;
+}
+
+/* Selection */
+::selection {
+  background-color: #00C865;
+  color: #111111;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
